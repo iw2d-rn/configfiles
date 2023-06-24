@@ -30,8 +30,7 @@ mustard = '#af8700'
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
 success_symbol = '[#](bold cyan)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-
-
+error_symbol = "[❌](bold red)[#](bold cyan)"
 
 # You can also replace your username with a neat symbol like   or disable this
 # and use the os module below
@@ -130,7 +129,9 @@ symbol = "⌘ "
 symbol = " "
 
 [hostname]
+ssh_only = false
 ssh_symbol = " "
+format = "[u:](bold #a600ff)[$hostname](bold #ffbb00) [h:](bold #e5ff00)"
 
 [java]
 symbol = " "
