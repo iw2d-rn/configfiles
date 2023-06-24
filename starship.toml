@@ -1,0 +1,236 @@
+# Use custom format
+format= """$os$hostname$username$localip$shlvl$singularity$kubernetes$directory$vcsh$fossil_branch$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$pijul_channel$docker_context$package$c$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$golang$guix_shell$haskell$haxe$helm$java$julia$kotlin$gradle$lua$nim$nodejs$ocaml$opa$perl$php$pulumi$purescript$python$raku$rlang$red$ruby$rust$scala$solidity$swift$terraform$vlang$vagrant$zig$buf$nix_shell$conda$meson$spack$memory_usage$aws$gcloud$openstack$azure$env_var$crystal$custom$sudo$cmd_duration$jobs$battery$time$status$os$container$shell$character"""
+
+# format = '''
+# [┌───────────────────>](bold green)
+# [│](bold green)$directory$rust$package
+# [└─>](bold green) '''
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+# scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+# Set 'foo' as custom color palette
+palette = 'foo'
+
+# Define custom colors
+[palettes.foo]
+# Overwrite existing color
+blue = '21'
+# Define new color
+mustard = '#af8700'
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+# add_newline = false
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[#](bold cyan)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+
+
+# You can also replace your username with a neat symbol like   or disable this
+# and use the os module below
+[username]
+show_always = true
+format = '[$user ](bold #ff0000)'
+disabled = false
+
+
+
+
+# An alternative to the username module which displays a symbol that
+# represents the current operating system
+[os]
+# style = "bg:#9A348E"
+disabled = true # Disabled by default
+
+
+[directory]
+style = "bg:#DA627D"
+format = "[$path ](bold #fb00ff)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+
+[custom.sudo]
+description = "display 👑 crown when in sudo mode "
+command = "echo 👑"
+format = "[$output ](bold $style)"
+when = "sudo -nv"
+# Disable the package module, hiding it from the prompt completely
+# [package]
+# disabled = true
+# [Terminal font]
+# terminal.integrated.fontFamily= 'FiraMono Nerd Font Mono'
+
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+
+
+[aws]
+symbol = " "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+style = "149 bold #347deb"
+version_format="v$major:$minor:$patch"
+format="[$symbol($version(-$name) )]($style)"
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+version_format="v$major:$minor:$patch"
+
+# [directory]
+# read_only = "󰌾 "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = "⌘ "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+style = "149 bold #13ed25"
+version_format="v$major:$minor:$patch"
+format="[$symbol($version(-$name) )]($style)"
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+version_format="v$major:$minor:$patch"
+format="[$symbol($version(-$name) )]($style)"
+
+[pijul_channel]
+symbol = "🪺 "
+
+[python]
+symbol = " "
+version_format="v$major:$minor:$patch"
+format="[$symbol($version(-$name) )]($style)"
+
+[rlang]
+symbol = "󰟔 "
+version_format="v$major:$minor:$patch"
+format="[$symbol($version(-$name) )]($style)"
+
+[ruby]
+symbol = " "
+version_format="v$major:$minor:$patch"
+format="[$symbol($version(-$name) )]($style)"
+
+[rust]
+symbol = " "
+version_format="v$major:$minor:$patch"
+format="[$symbol($version(-$name) )]($style)"
+
+[scala]
+symbol = " "
+
+[spack]
+symbol = "🅢 "
+
