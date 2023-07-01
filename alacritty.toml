@@ -24,8 +24,9 @@ y = 0
 [scrolling]
 history = 99999
 
+# program="/bin/bash"
 [shell]
-program= "/bin/bash"
+program="/bin/zsh"
 
 [font]
 builtin_box_drawing = false
@@ -170,3 +171,4 @@ log_level = "Warn"
 persistent_logging = false
 print_events = false
 render_timer = false
+

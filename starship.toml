@@ -53,7 +53,8 @@ disabled = true # Disabled by default
 style = "bg:#DA627D"
 format = "[$path ](bold #fb00ff)"
 truncation_length = 3
-truncation_symbol = "…/"
+# truncation_symbol = "…/"
+read_only = "󰌾 "
 
 
 [custom.sudo]
@@ -73,8 +74,6 @@ when = "sudo -nv"
 "Downloads" = " "
 "Music" = " "
 "Pictures" = " "
-
-
 
 [aws]
 symbol = " "
